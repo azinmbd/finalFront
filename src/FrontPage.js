@@ -8,7 +8,7 @@ export default function FrontPage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/book")
+      .get("http://localhost:5000/")
       .then((response) => {
         setBooks(response.data);
       })
@@ -19,7 +19,7 @@ export default function FrontPage() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/book/delete/${id}`)
+      .delete(`http://localhost:5000/${id}`)
       .then((response) => {
         console.log(response);
         const newBook = books.filter((item) => item._id !== id);

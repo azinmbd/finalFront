@@ -28,7 +28,7 @@ export default function AddBook() {
       setError(true);
     } else {
       axios
-        .post("http://localhost:5000/book/create", book)
+        .post("http://localhost:5000/", book)
         .then((response) => {
           console.log(response);
           // handle successful response
